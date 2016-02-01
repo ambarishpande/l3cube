@@ -1,0 +1,19 @@
+{
+  "name": "Blood Bank Management",
+  "description": "Blood Bank Stock and Donor Management Centralised system for blood banks.",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "Ambarish Pande",
+    "Shabbir Bawaji"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

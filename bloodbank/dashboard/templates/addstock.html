@@ -1,0 +1,36 @@
+<form class="col s12" id="add_stock_form">
+  <div class="row">
+    <div class="input-field col s12">
+      <input  name ="cno" id="cno" type="text" class="validate">
+      <label for="cno">Donor Contact Number</label>
+    </div>
+  </div>
+   <div class="row">
+    <div class="input-field col s12">
+      <input  name ="stickerno" id="stickerno" type="text" class="validate">
+      <label for="stickerno">Sticker No.</label>
+    </div>
+  </div>
+   <div clas="row">
+    <div class="input-field col s12">
+      <select class="browser-default" name="bgroup" required> 
+        <option value="" disabled selected>Choose Blood Group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      <!-- <label>Materialize Select</label> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input name="register" id="register" type="submit" class="waves-effect btn">
+      </div>
+  </div>
+
+</form>

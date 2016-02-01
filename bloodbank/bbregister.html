@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+<form method="post">
+	Sticker no:<input type="text" name="stickerno"><br>
+	bb user name:<input type="text" name="buname"><br>
+	contact no:<input type="text" name="cno"><br>
+	<!--street no:<input type="text" name="stno"><br>
+	area:<input type="text" name="area"><br>
+	city:<input type="text" name="city"><br>
+	state:<input type="text" name="state"><br>
+	username:<input type="text" name="uname"><br>
+	bgroup:<input type="text" id="bgroup" name="bgroup"><br>
+	DOB:<input type="date" name="dob"><br>
+	password:<input type="password" name="pass"><br>-->
+	<input type="submit" value="Submit">
+</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('form').submit(function(e){
+			alert($('#bgroup').val());
+			e.preventDefault();
+			var data=$(this).serialize();
+			$.ajax({
+				type: "POST",
+				url: "scripts/addstock.php",
+				data: data,
+				//dataType: 'json',
+				//contentType:"text/plain",
+				success: function(result){
+						alert(result);
+					}
+			});
+		});
+		return false;
+	});
+</script>
+</body>
+</html>

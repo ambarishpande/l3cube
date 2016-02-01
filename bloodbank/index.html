@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Blood Bank Web App Login</title>
+    </head>
+    <body ng-app="l3cube">  
+  <header>
+  <nav>  
+   </nav>
+  </header>
+  <main>
+    <div class="container">
+        <div class="row card" style="margin-top:25px;">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3"><a class="active" href="#test1">Login</a></li>
+              <li class="tab col s3"><a  href="#test2">Register</a></li>
+            </ul>
+          </div>
+          <div id="test1" class="col s12">
+            <div class="container">
+              <!-- bulding no
+              street no
+              area 
+              city 
+              contact
+               -->
+               <form id="login_form">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="uname" id="uname" type="text" class="validate">
+                      <label for="uname">Username</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name="pass" id="pass" type="password" class="validate">
+                      <label for="pass">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name="login" id="login" type="submit" class="waves-effect btn">
+                      </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+          <div id="test2" class="col s12">
+            <div class="container">
+               <div class="row">
+                <form class="col s12" id="register_form">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="name" id="name" type="text" class="validate">
+                      <label for="name">Name</label>
+                    </div>
+                  </div>
+                   <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="stno" id="stno" type="text" class="validate">
+                      <label for="stno">Street no.</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="bno" id="bno" type="text" class="validate">
+                      <label for="bno">Building no.</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name ="area" id="area" type="text" class="validate">
+                      <label for="area">Area</label>
+                    </div>
+                  </div>
+                  <div class="input-field col s12">
+                    <select name="country" class="countries browser-default" id="countryId">
+                    <option value="">Select Country</option>
+                    </select>
+                  </div>
+                  <div class="input-field col s12">
+                       <select name="state" class="states browser-default" id="stateId">
+                    <option value="">Select State</option>
+                    </select>
+                  </div>
+
+                  <div class="input-field col s12">
+                       <select name="city" class="cities browser-default" id="cityId">
+                    <option value="">Select City</option>
+                  </select>
+                  </div>
+                   
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="cno " id="cno" type="text" class="validate">
+                      <label for="cno">Contact No</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  name ="uname" id="uname" type="text" class="validate">
+                      <label for="uname">Username</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name="pass" id="pass" type="password" class="validate">
+                      <label for="pass">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input name = "register" id="register" type="submit" class="waves-effect btn">
+                      </div>
+                  </div>
+                </form>
+              </div>
+                    
+            </div>
+          </div>
+        </div>
+            
+    </div>
+   </main>
+
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+
+        <script src="http://lab.iamrohit.in/js/location.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // body...
+                // $('ul.tabs').tabs();
+                  $('.button-collapse').sideNav({
+                      menuWidth: 300, // Default is 240
+                      edge: 'left', // Choose the horizontal origin
+                      // closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                    }
+                  );
+
+                  // $('select').click(){
+                  //   $(this).material_select();
+  
+                  // }
+                  
+            });
+
+            $('#register_form').submit(function(e) {
+              e.preventDefault();
+              var url = "scripts/bbreg.php";
+              $.ajax({ 
+                type: "POST",
+                url: url,
+                crossDomain:true,
+                xhrFields: {
+                    withCredentials: false
+                 },
+                data: $('#register_form').serialize(),
+                success:function(data){
+                  // $('input').val('');
+                  // if (data == "ok") {
+                  //   window.location.href=""
+                  // }
+                  // Materialize.toast(data,'4000');
+                }
+                
+              });
+            return false;
+            });
+
+              $('#login_form').submit(function(e) {
+              e.preventDefault();
+              var url = "scripts/bblogin.php";
+              $.ajax({ 
+                type: "POST",
+                url: url,
+                crossDomain:true,
+                xhrFields: {
+                    withCredentials: false
+                 },
+                data: $('#login_form').serialize(),
+                success:function(data){
+
+                  // alert(data);
+                  if(data=="ok"){
+             
+                    window.location.href="dashboard";
+                  }    
+
+                  $('input').val('');
+                  Materialize.toast(data,'4000');
+
+                }
+                
+              });
+            return false;
+            });
+        </script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+
+    </body>
+</html>
