@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
+        <style type="text/css">
+            main,header{
+                padding-left: 300px;
+            }
+
+            @media only screen and (max-width: 992px){
+                main,header{
+                    padding-left: 0;
+                }
+
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Home</title>
+    </head>
+    <body >  
+  <header>
+  <div class="navbar-fixed">
+      <nav  class="cyan" style="padding-left:10px;padding-right:10px;">  
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>   
+    <a style="font-size:1.6rem;" class="title">Home</a> 
+    <!-- <a class="waves-effect right" style="padding" href="">Logout</a> -->
+  </nav>
+  </div>
+      <ul class="side-nav fixed" id="mobile-demo">
+        <li class="cyan darken-1" style="height:150px;line-height:250px;color:white;" >
+          <div style="font-size:1.6rem;" >Welcome <span class="user"></span>!</div>
+        </li>
+        <li><a href="#home">Home</a></li>
+  <!--       <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Donors</a>
+              <div class="collapsible-body" style="">
+                <ul>
+                  <li><a href="#addnewdonor">Add New Donor</a></li>
+                  <li><a href="#donorlist">Donor List</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li> -->
+        <li><a href="#events">Events</a></li>
+        <li><a href="#createEvent">Create Event</a></li>
+        <!-- <li><a href="">Events</a></li> -->
+      </ul>
+    
+
+  </header>
+
+       
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers.js"></script>
+        <script type="text/javascript">
+                $.get("http://ipinfo.io", function(response) {
+                 window.localStorage.currentCity = response.city;     
+              }, "jsonp");
+                 
+        $('.user').html(window.localStorage.username);     
+       console.log(window.localStorage.username);
+        </script>
+
+
+
+    <main>
+    <div id="app" >
+        
+
+
+    </div>
+   </main>
+
+    </body>
+</html>
+  

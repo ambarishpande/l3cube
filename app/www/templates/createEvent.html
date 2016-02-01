@@ -1,0 +1,72 @@
+<div class="row">
+
+<form class="col s12" id="event_form">
+  <input required type="hidden" name="uname" id="uname" value="">
+  <div class="">
+    <div class="input-field col s12">
+      <input required  name ="name" id="name" type="text" class="validate">
+      <label for="name">Name</label>
+    </div>
+  </div>
+  <div class="input-field col s12">
+    <textarea name="desc" id="desc" class="materialize-textarea"></textarea>
+    <label for="desc">Description</label>
+  </div>
+   <div class="">
+    <div class="input-field col s12">
+      <input required  name ="stno" id="stno" type="text" class="validate">
+      <label for="stno">Street no.</label>
+    </div>
+  </div>
+  <div class="">
+    <div class="input-field col s12">
+      <input required  name ="bno" id="bno" type="text" class="validate">
+      <label for="bno">Building no.</label>
+    </div>
+  </div>
+  <div class="">
+    <div class="input-field col s12">
+      <input required name ="area" id="area" type="text" class="validate">
+      <label for="area">Area</label>
+    </div>
+  </div>
+  <div class="input-field col s12">
+    <select name="country" class="countries browser-default" id="countryId">
+    <option value="">Select Country</option>
+    </select>
+  </div>
+  <div class="input-field col s12">
+       <select name="state" class="states browser-default" id="stateId">
+    <option value="">Select State</option>
+    </select>
+  </div>
+
+  <div class="input-field col s12">
+       <select name="city" class="cities browser-default" id="cityId">
+    <option value="">Select City</option>
+  </select>
+  </div>
+   
+   <div class="">
+    <div class="input-field col s12">
+      <input required  name ="tdate" id="tdate" type="date"  class="datepicker validate">
+    </div>
+  </div>
+  <div class="">
+    <div class="input-field col s12">
+      <input required  name ="stime" id="stime" type="time"  class=" validate">
+    </div>
+  </div>
+  <div class="">
+    <div class="input-field col s12">
+      <input required  name ="etime" id="etime" type="time"  class=" validate">
+    </div>
+  </div>
+  <div class="">
+    <div class="input-field col s12">
+      <input required name="event" id="event" type="submit" class="waves-effect btn">
+      </div>
+  </div>
+
+</form>
+</div>
