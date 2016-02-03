@@ -1,4 +1,5 @@
 <?php
+	header("Access-Control-Allow-Origin: *");
 	include_once('config.php');
 	$stickerno=$_POST['stickerno'];
 	session_start();
