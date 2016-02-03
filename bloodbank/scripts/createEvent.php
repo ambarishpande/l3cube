@@ -1,5 +1,7 @@
 <?php
+	// include_once('config.php');
 	header("Access-Control-Allow-Origin: *");
+	// echo "ok";
 	include_once('config.php');
 	$name = $_POST['name'];
 	$tdate=$_POST['tdate'];
@@ -13,7 +15,7 @@
 	$decs=$_POST['desc'];
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	$sql="select * from user where uname='$uname' limit 1";
-	result = $conn->query($sql);
+	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
